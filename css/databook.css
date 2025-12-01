@@ -1,0 +1,230 @@
+/* --- Reset e Configurações Básicas --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+
+.phone-screen {
+    width: 100%;
+    height: 750px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.header {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #f7f0f0;
+    cursor: pointer;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+
+
+.main-content {
+    flex-grow: 1;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+.video-overlay-gradient {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%);
+    z-index: 1;
+    pointer-events: none; 
+}
+
+/* 3. Camada de Conteúdo (Frente) */
+.overlay-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    z-index: 2;
+}
+
+
+.left-info {
+    max-width: 75%;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #00b894;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.username {
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.video-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.video-description {
+    font-size: 14px;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+
+.right-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-item {
+    text-align: center;
+}
+
+.action-icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px); 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 5px;
+    border: 2px solid rgba(255,255,255,0.8);
+    transition: transform 0.2s;
+}
+
+.action-icon-circle:active {
+    transform: scale(0.9);
+}
+
+.action-count {
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* --- Barra de Progresso --- */
+.progress-bar-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 3;
+}
+
+.progress-bar-fill {
+    width: 40%;
+    height: 100%;
+    background-color: #00b894;
+}
+
+.bottom-nav {
+    background-color: #1a1a1a;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #333;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.nav-item.active {
+    opacity: 1;
+}
+
+.nav-img-container {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #444;
+    margin-bottom: 5px;
+    transition: border-color 0.3s;
+}
+
+.nav-item.active .nav-img-container {
+    border: 3px solid #00b894;
+}
+
+.nav-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-label {
+    color: white;
+    font-size: 12px;
+}
