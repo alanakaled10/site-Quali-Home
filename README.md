@@ -1,1 +1,1 @@
-# site-Quali-Home
+Repositório destinado a publicação da página do site QualiHome.
